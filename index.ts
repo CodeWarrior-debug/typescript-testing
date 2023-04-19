@@ -7,19 +7,37 @@ interface Todo{
     id:number;
     title:string;
     // **********optional values with ?
-    age?: number,
+    // pipe for multi variable types, 
+    weight?: number | string = string
 }
+
+// TODO reinforce what type void does
+// TODO reinforce what TS generics and functions are 
+// TODO reinforce enums and statuses, remember enum assignments use equals sign not :
+
+
+//quotable - any is the worst type in Typescript
+
+//never - basically throws errors, needs throw and not return
+
+//converting datatypes later down the road = two step unknown option
+
+// working with DOM  -ex. HTMLInputElement - tons of different HTML elements, even event types
+
+
 
 const todo: Todo = {
     id:2,
     title: 'lift four things',
-    age: 75
+    weight: 80,
 }
 
-const {id, title} = todo;
 
 
-console.log(`my todo has id less than ${id+1} and is titled ${title} and is so very old at ${}`)
+const {id, title, weight} = todo;
+
+
+console.log(`my todo has id less than ${id+1} and is titled ${title} and is so very old at ${weight}`)
 
 
 // **********passing arguments with type requirements
